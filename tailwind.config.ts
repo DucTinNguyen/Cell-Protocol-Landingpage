@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primaryText: "#8CE339"
+      },
+      fontFamily: {
+        neueHaas: ['var(--font-neue-haas)', 'system-ui'],
+        marbold: ['var(--font-marbold)', 'system-ui'],
+        cirka: ['var(--font-cirka)', 'system-ui'],
       },
     },
   },
