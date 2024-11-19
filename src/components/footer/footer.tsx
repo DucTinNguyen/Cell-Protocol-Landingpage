@@ -183,7 +183,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-8 w-full border-t border-[#122405] py-4 text-[14px] font-medium tracking-[-0.21px] text-[#798675]">
-        Copyright © DeBioWorld 2024
+        Copyright © Cell ProtocolWorld 2024
       </div>
     </footer>
   );
