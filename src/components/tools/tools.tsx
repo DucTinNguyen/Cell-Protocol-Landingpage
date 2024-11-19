@@ -1,43 +1,12 @@
 import Image from "next/image";
 import toolsBG from "@images/toolsBg.png";
 import globeIcon from "@images/globe.svg";
-import allTools from "@images/all-tools.png";
 import hugIcon from "@images/hugface.png";
 import openBioIcon from "@images/openbio.png";
 import fastIcon from "@images/fastai.png";
 import pytoIcon from "@images/pyto.png";
 import arxivIcon from "@images/arxiv.png";
 import bioIcon from "@images/bioxiv.png";
-
-const FIRST_ROW = [
-  {
-    title: "Hugging Face",
-    imgUrl: hugIcon,
-  },
-  {
-    title: "Open Bio",
-    imgUrl: openBioIcon,
-  },
-  {
-    title: " fast",
-    imgUrl: fastIcon,
-  },
-];
-
-const SECOND_ROW = [
-  {
-    title: "PyTorch",
-    imgUrl: pytoIcon,
-  },
-  {
-    title: "Arxiv",
-    imgUrl: arxivIcon,
-  },
-  {
-    title: "BioXiv",
-    imgUrl: bioIcon,
-  },
-];
 
 export default function Tools() {
   return (

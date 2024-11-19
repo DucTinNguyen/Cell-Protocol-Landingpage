@@ -10,7 +10,6 @@ import nftMobileImg from "@images/nft-mobile.png";
 import lpImg from "@images/launchpad.png";
 import lpMobileImg from "@images/launchpad-mobile.png";
 import fundImg from "@images/fund.png";
-import marketImg from "@images/market.png";
 import marketMobileImg from "@images/market-mobile.png";
 
 export default function Projects() {

@@ -98,11 +98,11 @@ export default function Footer() {
         </div>
 
         <div className="items-center justify-start gap-5 md:hidden flex w-full">
-          {SOCIAL_LINKS.map((item, index) => (
+          {SOCIAL_LINKS.map((item) => (
             <Link
               href={item.url}
               className="size-8 flex items-center relative justify-center"
-              key={index}
+              key={item.icon}
             >
               <Image
                 src={item.icon}
@@ -118,7 +118,7 @@ export default function Footer() {
           className="flex md:items-start items-end justify-between 
         md:grow w-full md:h-[290px]"
         >
-          {FOOTER_LINKS.map((item, index) => (
+          {FOOTER_LINKS.map((item) => (
             <div className="" key={item.title}>
               <h3 className="text-[#8CE339] text-[16px] leading-6 font-semibold mb-6">
                 {item.title}

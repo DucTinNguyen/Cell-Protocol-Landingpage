@@ -1,6 +1,5 @@
 import Image from "next/image";
 import virusIcon from "@images/char-virus.png";
-import ideaIcon from "@images/ideas.svg";
 import distributedIcon from "@images/distributed.svg";
 import collabIcon from "@images/collab.svg";
 import benefitIcon from "@images/benefit.svg";
