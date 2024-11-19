@@ -1,3 +1,4 @@
+"use client";
 import logo from "@images/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,7 @@ import discordIcon from "@images/discord.svg";
 import xIcon from "@images/x.svg";
 import teleIcon from "@images/tele.svg";
 import mediumIcon from "@images/medium.svg";
+import arrowIcon from "@images/arrow.svg";
 
 const FOOTER_LINKS = [
   {
@@ -33,6 +35,13 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Footer() {
+  const backToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer
       className="w-full px-4 
@@ -106,8 +115,8 @@ export default function Footer() {
         </div>
 
         <div
-          className="flex items-start justify-between 
-        md:grow w-full"
+          className="flex md:items-start items-end justify-between 
+        md:grow w-full md:h-[290px]"
         >
           {FOOTER_LINKS.map((item, index) => (
             <div className="" key={item.title}>
@@ -128,19 +137,51 @@ export default function Footer() {
             </div>
           ))}
 
-          <div className="items-center justify-end  gap-5 hidden md:flex">
-            {SOCIAL_LINKS.map((item, index) => (
-              <Link
-                href={item.url}
-                className="size-8 flex items-center justify-center"
-                key={index}
+          {/* back top */}
+          <div className="flex flex-col items-end justify-start gap-4 md:hidden">
+            <button
+              onClick={() => backToTop()}
+              className="flex w-14 h-14 rounded-full items-center justify-center
+            shadow-[0px_1px_0px_0px_rgba(255,255,255,0.05)_inset,0px_0px_40px_-2px_rgba(0,0,0,0.56),0px_-1px_0px_0px_rgba(0,0,0,0.20)_inset]
+          bg-[linear-gradient(270deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.08)_100%)]"
+            >
+              <Image src={arrowIcon} alt="arrow icon" />
+            </button>
+            <p className="text-[#F2FFE9] text-[12px] font-semibold tracking-[-0.1px]">
+              Back to top
+            </p>
+          </div>
+
+          <div className="md:h-full flex flex-col justify-between">
+            <div className="items-center justify-end  gap-5 hidden md:flex">
+              {SOCIAL_LINKS.map((item, index) => (
+                <Link
+                  href={item.url}
+                  className="size-8 flex items-center justify-center"
+                  key={index}
+                >
+                  <Image src={item.icon} alt="social icon" />
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex flex-col items-end justify-start gap-4 md:flex hidden">
+              <button
+                onClick={() => backToTop()}
+                className="flex w-14 h-14 rounded-full items-center justify-center
+            shadow-[0px_1px_0px_0px_rgba(255,255,255,0.05)_inset,0px_0px_40px_-2px_rgba(0,0,0,0.56),0px_-1px_0px_0px_rgba(0,0,0,0.20)_inset]
+          bg-[linear-gradient(270deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.08)_100%)]"
               >
-                <Image src={item.icon} alt="social icon" />
-              </Link>
-            ))}
+                <Image src={arrowIcon} alt="arrow icon" />
+              </button>
+              <p className="text-[#F2FFE9] text-[12px] font-semibold tracking-[-0.1px]">
+                Back to top
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
       <div className="mt-8 w-full border-t border-[#122405] py-4 text-[14px] font-medium tracking-[-0.21px] text-[#798675]">
         Copyright © DeBioWorld 2024
       </div>

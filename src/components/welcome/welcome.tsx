@@ -63,7 +63,7 @@ export default function WelcomeSection() {
       {/* intro image */}
       <div
         className=" w-[370px] h-[220.719px]
-      md:absolute mt-20 md:mt-0 z-10 md:w-[1098px] md:h-[655px] md:top-[504px] "
+      md:absolute mt-20 md:mt-0 z-10 md:w-[1098px] md:h-[655px] md:top-[544px] "
       >
         <Image src={introImage} alt="intro image" />
       </div>
