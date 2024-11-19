@@ -5,7 +5,7 @@ export default function WelcomeSection() {
   return (
     <section
       className="w-full flex flex-col items-center justify-start 
-    md:h-[1159px]"
+    md:h-[1159px] h-[810px]"
     >
       <div className="w-full h-[810px] absolute top-0 left-0">
         <div className="w-full h-full relative">
@@ -18,22 +18,28 @@ export default function WelcomeSection() {
         </div>
       </div>
 
-      <div className="w-full max-w-[1440px] flex flex-col items-center justify-start relative z-10">
+      <div className="w-full md:max-w-[1440px] max-w-[414px] flex flex-col items-center justify-start relative z-10">
         {/* title */}
         <h1
-          className="
-      mt-[172px] text-center font-marbold text-[64px] leading-[76px] -tracking-[2.24px]
+          className="mt-[160px] text-[36px] leading-[46px] tracking-[-1.26px] mx-4
+      md:mt-[172px] text-center font-marbold md:text-[64px] md:leading-[76px] md:-tracking-[2.24px]
       bg-[linear-gradient(270deg,#AFEB2B_18.91%,#8DFF33_47.94%,#DFFBBF_99.95%)] bg-clip-text text-transparent"
         >
           THE
-          <span className="mx-4 text-[80px] font-medium leading-[76px] tracking-[-2.8px] font-cirka">
+          <span
+            className="text-[44px] leading-[46px] tracking-[-1.54px]
+          mx-4 md:text-[80px] font-medium md:leading-[76px] md:tracking-[-2.8px] font-cirka"
+          >
             FUTURE
           </span>
           OF <br /> DECENTRALIZED SCIENCE
         </h1>
 
         {/* motto */}
-        <p className="mt-6 text-[rgba(242,255,233,0.72)] text-[24px] leading-none -tracking-[0.24px] font-medium">
+        <p
+          className=" mt-4 text-[14px] leading-[20px] tracking-[-0.14px] text-center
+        md:mt-6 text-[rgba(242,255,233,0.72)] md:text-[24px] md:leading-none md:-tracking-[0.24px] font-medium"
+        >
           Discover the next wave of research: blockchain powered and boundless
         </p>
 
@@ -44,7 +50,7 @@ export default function WelcomeSection() {
       "
         >
           <div
-            className=" text-white h-full flex items-center justify-center px-6 py-2.5
+            className="h-full flex items-center justify-center px-6 py-2.5
         rounded-[999px] bg-[#F7FDFD] text-[#003304] text-[18px] leading-none font-semibold
         
         "
@@ -55,7 +61,10 @@ export default function WelcomeSection() {
       </div>
 
       {/* intro image */}
-      <div className="absolute z-10 md:w-[1098px] md:h-[655px] md:top-[504px] ">
+      <div
+        className=" w-[370px] h-[220.719px]
+      md:absolute mt-20 md:mt-0 z-10 md:w-[1098px] md:h-[655px] md:top-[504px] "
+      >
         <Image src={introImage} alt="intro image" />
       </div>
     </section>

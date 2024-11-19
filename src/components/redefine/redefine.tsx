@@ -1,34 +1,42 @@
-import ideaIcon from "@images/ideas.svg";
+import marqueImg from "@images/marque.png";
 import Image from "next/image";
 import virus from "@images/redefine-virus.png";
+import barrierIcon from "@images/barrier.svg";
+import banIcon from "@images/ban.svg";
+import fairIcon from "@images/fair.svg";
 
 export default function RedefineSection() {
   const IDEA_CARDS = [
     {
-      title: "NSTITUTIONAL BARRIERS",
+      title: "INSTITUTIONAL BARRIERS",
       content:
-        " - traditional academia's exclusive culture and rigid hierarchies stifle creativity and breakthrough discoveries",
+        "Traditional academia's exclusive culture and rigid hierarchies stifle creativity and breakthrough discoveries",
+      imgUrl: barrierIcon,
     },
     {
       title: "STAGNATION",
       content:
-        "- scientific advancement has hit roadblocks due to limited resources and outdated infrastructure",
+        "Scientific advancement has hit roadblocks due to limited resources and outdated infrastructure",
+      imgUrl: banIcon,
     },
     {
       title: "UNFAIR COMPENSATION",
       content:
-        "Clusionary and elitist academic cultures reduce richness of ideas and hold back novel innovations",
+        "Researchers struggle to receive adequate compensation for their groundbreaking discoveries",
+      imgUrl: fairIcon,
     },
   ];
 
   return (
     <section className="relative w-full max-w-[1440px] flex flex-col justify-start">
       {/* marque */}
-      <div className="my-[60px] h-[76px] bg-yellow-200 w-full"></div>
+      <div className="md:my-[60px] my-10 w-full h-[76px] relative">
+        <Image src={marqueImg} alt="marque" fill className="object-cover" />
+      </div>
 
       {/* content */}
       <div
-        className="
+        className=" mx-4 md:mx-0
       md:mt-[111px] md:ml-[84px] md:w-[636px]"
       >
         <div
@@ -39,42 +47,62 @@ export default function RedefineSection() {
         >
           Redefining Science for the Modern Age
         </div>
-        <p className="mt-4 font-marbold uppercase text-[#F2FFE9] text-[32px] leading-none -tracking-[0.8px] ">
-          Science Needs an update
+        <p
+          className="mt-4 font-marbold uppercase text-[#F2FFE9] text-[32px] leading-[40px]
+        md:leading-none -tracking-[0.8px]"
+        >
+          Science demands transformation
         </p>
-        <p className="mt-10 text-[24px] font-semibold -tracking-[0.24px] text-[#798675]">
+        <p
+          className=" mt-6 text-[16px] tracking-[-0.16px] 
+        md:mt-10 md:text-[24px] font-semibold md:-tracking-[0.24px] text-[#798675]"
+        >
           The current scientific ecosystem is becoming obsolete as we enter a
           new era of technological possibility.
         </p>
       </div>
 
       {/* decorator image */}
-      <div className="absolute top-[106px] right-[-50px] w-[785px] h-[760px] z-10">
-        <Image src={virus} alt="virus" />
+      <div
+        className="w-full flex items-center 
+      my-10 justify-center h-[247px] -ml-12
+      md:my-0 md:ml-0 md:w-[785px] md:h-[760px] md:absolute md:top-[106px] md:right-[-50px] md:z-10
+      "
+      >
+        <div
+          className=" w-[350px] h-[350px] mt-[-50px]
+        md:w-[785px] md:h-[760px] "
+        >
+          <Image src={virus} alt="virus" />
+        </div>
       </div>
 
       {/* idea cards */}
-      <div className="w-full mt-[86px] flex items-center justify-center gap-4 relative z-20">
+      <div
+        className="w-full mt-0 flex flex-col px-4
+      md:mt-[86px] md:flex-row md:px-0 items-center justify-center gap-4 relative z-20"
+      >
         {IDEA_CARDS.map((item, index) => (
           <div
             key={index}
-            className=" px-6 py-10 w-[416px] rounded-2xl
+            className=" px-6 py-10 rounded-2xl w-full
+            md:w-[416px]
             border border-[rgba(255,255,255,0.10)]
             bg-[rgba(12,37,4,0.50)] backdrop-blur-[25px]
             "
           >
             {/* card logo */}
-            <div className="size-16 rounded-full border border-[rgba(255,255,255,0.12)] p-3 bg-[rgba(18,18,18,0.18)]">
-              <Image src={ideaIcon} alt="idea icon" />
+            <div className="size-16 flex items-center justify-center rounded-full border border-[rgba(255,255,255,0.12)] p-3 bg-[rgba(18,18,18,0.18)]">
+              <Image src={item.imgUrl} alt="idea icon" width={32} height={32} />
             </div>
 
             {/* card title */}
-            <h3 className="mt-6 text-[#F7FDFD] text-[16px] font-semibold">
+            <h3 className="mt-6 text-primaryText text-[16px] font-semibold">
               {item.title}
             </h3>
 
             {/* card content */}
-            <p className="text-primaryText text-[14px] font-medium -tracking-[0.21px] mt-3">
+            <p className=" text-[#F7FDFD] text-[14px] font-medium -tracking-[0.21px] mt-3">
               {item.content}
             </p>
           </div>

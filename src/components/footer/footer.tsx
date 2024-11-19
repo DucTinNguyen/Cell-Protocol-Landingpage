@@ -34,14 +34,21 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="w-full px-20 pt-10 pb-4 max-w-[1440px]">
-      <div className="w-full flex items-start gap-20">
-        <div className="w-[570px]">
+    <footer
+      className="w-full px-4 
+    md:px-20 pt-10 pb-4 md:max-w-[1440px]"
+    >
+      <div
+        className="w-full flex items-start gap-10
+      md:flex-row flex-col md:gap-20
+      "
+      >
+        <div className="md:w-[570px] w-full">
           {/* logo */}
           <div className="gap-[14px] flex items-center justify-start">
             <Image src={logo} alt="logo" width={48} height={48} />
-            <p className="text-white font-semibold text-[40px] leading-none tracking-[-1.2px]">
-              DeBio
+            <p className="text-white font-semibold text-[40px] leading-none tracking-[-1.2px] uppercase">
+              Cell Protocol
             </p>
           </div>
 
@@ -50,16 +57,20 @@ export default function Footer() {
             <h3 className="text-[24px] leading-8 font-bold tracking-[-0.24px]">
               Stay In The Loop
             </h3>
-            <p className="text-[#798675] font-medium leading-normal text-[16px] tracking-[-0.24px] mt-3">
-              Be part of the DeBio community and gain exclusive insights into
-              groundbreaking biotech innovation, funding opportunities, and
+            <p
+              className="text-[#798675] font-medium text-[14px] leading-[20px] w-[385px] tracking-[-0.21px]
+            md:leading-normal md:text-[16px] md:tracking-[-0.24px] mt-3 md:w-full"
+            >
+              Be part of the Cell Protocol community and gain exclusive insights
+              into groundbreaking biotech innovation, funding opportunities, and
               decentralized research advancements.
             </p>
           </div>
 
           {/* subscribe */}
           <div
-            className="mt-8 py-2 pr-2 pl-4 rounded-[100px] w-[439px] flex items-center justify-between 
+            className="mt-8 py-2 pr-2 pl-4 rounded-[100px] w-full
+            md:w-[439px] flex items-center justify-between 
           border border-[#3C3C3C] bg-[rgba(255,255,255,0.06)] backdrop-blur-[25px]"
           >
             <input
@@ -77,7 +88,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex items-start justify-between grow">
+        <div className="items-center justify-start gap-5 md:hidden flex w-full">
+          {SOCIAL_LINKS.map((item, index) => (
+            <Link
+              href={item.url}
+              className="size-8 flex items-center relative justify-center"
+              key={index}
+            >
+              <Image
+                src={item.icon}
+                alt="social icon"
+                fill
+                className="object-cover"
+              />
+            </Link>
+          ))}
+        </div>
+
+        <div
+          className="flex items-start justify-between 
+        md:grow w-full"
+        >
           {FOOTER_LINKS.map((item, index) => (
             <div className="" key={item.title}>
               <h3 className="text-[#8CE339] text-[16px] leading-6 font-semibold mb-6">
@@ -97,7 +128,7 @@ export default function Footer() {
             </div>
           ))}
 
-          <div className="flex items-center justify-end  gap-5">
+          <div className="items-center justify-end  gap-5 hidden md:flex">
             {SOCIAL_LINKS.map((item, index) => (
               <Link
                 href={item.url}
