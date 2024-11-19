@@ -22,7 +22,7 @@ export default function Header() {
         </div>
         {/* sections */}
         <div
-          className="flex items-center gap-4 text-[14px] md:block hidden 
+          className="items-center gap-4 text-[14px] md:flex hidden 
         font-semibold tracking-[-0.14px] mr-6"
         >
           <button className="text-primaryText">ABOUT US</button>
