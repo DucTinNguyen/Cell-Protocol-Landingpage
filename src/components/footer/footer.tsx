@@ -37,10 +37,10 @@ const FOOTER_LINKS = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: teleIcon, url: "#" },
-  { icon: xIcon, url: "#" },
-  { icon: mediumIcon, url: "#" },
-  { icon: icGithub, url: "#" },
+  { icon: teleIcon, url: "https://t.me/cell_protocol" },
+  { icon: xIcon, url: "https://x.com/CellProtocol_" },
+  { icon: mediumIcon, url: "https://medium.com/cell_protocol" },
+  { icon: icGithub, url: "https://github.com/cell-protocol-science" },
 ];
 
 export default function Footer() {
