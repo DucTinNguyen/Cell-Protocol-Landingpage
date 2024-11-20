@@ -7,31 +7,41 @@ import xIcon from "@images/x.svg";
 import teleIcon from "@images/tele.svg";
 import mediumIcon from "@images/medium.svg";
 import arrowIcon from "@images/arrow.svg";
+import icGithub from '@images/github.svg'
 
 const FOOTER_LINKS = [
   {
-    title: "Resources",
+    title: "Community",
     links: [
-      { title: "Contact", url: "#" },
-      { title: "FAQ", url: "#" },
-      { title: "Documentation", url: "#" },
+      { title: "X", url: "#" },
+      { title: "Telegram", url: "#" },
+      { title: "Medium", url: "#" },
     ],
   },
   {
-    title: "Company",
+    title: "Project",
     links: [
-      { title: "Terns of Service", url: "#" },
-      { title: "Privacy Policy", url: "#" },
-      { title: "Cookie Policy", url: "#" },
+      { title: "Documentation", url: "#" },
+      { title: "Github", url: "#" },
+      { title: "Dapp", url: "#" },
+    ],
+  },
+  {
+    title: "Token",
+    links: [
+      { title: "Dexscreener", url: "#" },
+      { title: "Solscan", url: "#" },
+      { title: "Resource", url: "#" },
+      { title: "Pump.fun", url: "https://Pump.fun" },
     ],
   },
 ];
 
 const SOCIAL_LINKS = [
-  { icon: discordIcon, url: "#" },
-  { icon: xIcon, url: "#" },
   { icon: teleIcon, url: "#" },
+  { icon: xIcon, url: "#" },
   { icon: mediumIcon, url: "#" },
+  { icon: icGithub, url: "#" },
 ];
 
 export default function Footer() {
@@ -101,6 +111,7 @@ export default function Footer() {
           {SOCIAL_LINKS.map((item) => (
             <Link
               href={item.url}
+              target="_blank"
               className="size-8 flex items-center relative justify-center"
               key={item.icon}
             >
@@ -115,7 +126,7 @@ export default function Footer() {
         </div>
 
         <div
-          className="flex md:items-start items-end justify-between 
+          className="flex md:items-start items-start justify-between 
         md:grow w-full md:h-[290px]"
         >
           {FOOTER_LINKS.map((item) => (
@@ -127,6 +138,7 @@ export default function Footer() {
                 {item.links.map((link, index) => (
                   <Link
                     href={link.url}
+                    target="_blank"
                     key={index}
                     className=" text-[#798675] text-[16px] leading-3 font-medium tracking-[-0.24px]"
                   >
@@ -183,7 +195,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-8 w-full border-t border-[#122405] py-4 text-[14px] font-medium tracking-[-0.21px] text-[#798675]">
-        Copyright © Cell ProtocolWorld 2024
+        Copyright © Cell Protocol 2024
       </div>
     </footer>
   );

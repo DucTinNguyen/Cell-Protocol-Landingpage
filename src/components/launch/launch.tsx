@@ -55,7 +55,7 @@ export default function Launcher() {
               boundaries.
             </p>
             <button className="text-[18px] text-[#003304] font-semibold mt-9 px-9 py-2.5 flex items-center justify-center rounded-[999px] bg-[#8CE339]">
-              Launch Portal
+              Launch App
             </button>
           </div>
         </div>

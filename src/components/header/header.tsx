@@ -1,8 +1,9 @@
 import Image from "next/image";
 import logo from "@images/logo.svg";
 import teleIcon from "@images/telehead.svg";
-import discordIcon from "@images/discordhead.png";
+import discordIcon from "@images/twitterhead.png";
 import menu from "@images/menu.svg";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -25,8 +26,9 @@ export default function Header() {
           className="items-center gap-4 text-[14px] md:flex hidden 
         font-semibold tracking-[-0.14px] mr-6"
         >
-          <button className="text-primaryText">ABOUT US</button>
-          <button className="text-[#798675]">CONTACT</button>
+          <button className="text-primaryText">HOME</button>
+          <button className="text-[#798675] uppercase">Token Documentation</button>
+          <Link target="_blank" className="text-[#798675]" href={'https://Pump.fun'}>Pump.fun</Link>
         </div>
 
         {/* social links */}
@@ -66,7 +68,7 @@ export default function Header() {
         bg-[linear-gradient(0deg,#DFFBBF_4.17%,#D3FF33_25.13%,#65CF21_122.92%)]
         "
         >
-          LAUNCH PORTAL
+          LAUNCH APP
         </button>
 
         {/* menu */}
