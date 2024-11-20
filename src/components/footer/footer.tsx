@@ -2,7 +2,6 @@
 import logo from "@images/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import discordIcon from "@images/discord.svg";
 import xIcon from "@images/x.svg";
 import teleIcon from "@images/tele.svg";
 import mediumIcon from "@images/medium.svg";
