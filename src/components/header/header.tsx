@@ -75,14 +75,17 @@ export default function Header() {
         </div>
 
         {/* launch button */}
-        <button
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href={"https://dashboard.cellprotocol.science/"}
           className="py-3 px-4 rounded-[999px] text-[#010D01] font-cirka mr-6 md:mr-0
           md:text-[16px] font-bold md:leading-4 text-[14px] leading-[14px]
         bg-[linear-gradient(0deg,#DFFBBF_4.17%,#D3FF33_25.13%,#65CF21_122.92%)]
         "
         >
           LAUNCH APP
-        </button>
+        </Link>
 
         {/* menu */}
         <div className="size-8 relative block md:hidden">

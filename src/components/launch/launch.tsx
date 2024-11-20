@@ -3,6 +3,7 @@ import bg from "@images/launch-bg.png";
 import realiseIcon from "@images/realise.png";
 import virusIcon from "@images/virus-final.png";
 import dnaIcon from "@images/dna.png";
+import Link from "next/link";
 
 export default function Launcher() {
   return (
@@ -54,9 +55,14 @@ export default function Launcher() {
               where innovative minds can freely explore and challenge scientific
               boundaries.
             </p>
-            <button className="text-[18px] text-[#003304] font-semibold mt-9 px-9 py-2.5 flex items-center justify-center rounded-[999px] bg-[#8CE339]">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={"https://dashboard.cellprotocol.science/"}
+              className="text-[18px] text-[#003304] font-semibold mt-9 px-9 py-2.5 flex items-center justify-center rounded-[999px] bg-[#8CE339]"
+            >
               Launch App
-            </button>
+            </Link>
           </div>
         </div>
       </div>
