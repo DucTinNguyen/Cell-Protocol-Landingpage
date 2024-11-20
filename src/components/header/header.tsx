@@ -29,7 +29,13 @@ export default function Header() {
           <button className="text-primaryText">HOME</button>
           <button className="text-[#798675] uppercase">Token</button>
           <button className="text-[#798675] uppercase">Documentation</button>
-          <Link target="_blank" className="text-[#798675]" href={'https://Pump.fun'}>Pump.fun</Link>
+          <Link
+            target="_blank"
+            className="text-[#798675]"
+            href={"https://Pump.fun"}
+          >
+            Pump.fun
+          </Link>
         </div>
 
         {/* social links */}
@@ -38,27 +44,33 @@ export default function Header() {
             className="md:size-[44px] size-8 rounded-full flex items-center justify-center
           bg-[linear-gradient(180deg,rgba(71,195,77,0.12)_0%,rgba(255,255,255,0.12)_100%)] border border-[rgba(255,255,255,0.04)]"
           >
-            <div className="md:w-6 md:h-6 h-4 w-4 relative">
+            <Link
+              href={"https://t.me/cell_protocol"}
+              className="md:w-6 md:h-6 h-4 w-4 relative"
+            >
               <Image
                 src={teleIcon}
                 alt="telegram"
                 fill
                 className="object-cover"
               />
-            </div>
+            </Link>
           </div>
           <div
             className="md:size-[44px] size-8 rounded-full flex items-center justify-center
           bg-[linear-gradient(180deg,rgba(71,195,77,0.12)_0%,rgba(255,255,255,0.12)_100%)] border border-[rgba(255,255,255,0.04)]"
           >
-            <div className="md:w-6 md:h-6 h-4 w-4 relative">
+            <Link
+              href={"https://x.com/CellProtocol_"}
+              className="md:w-6 md:h-6 h-4 w-4 relative"
+            >
               <Image
                 src={discordIcon}
                 alt="telegram"
                 fill
                 className="object-cover"
               />
-            </div>
+            </Link>
           </div>
         </div>
 

@@ -6,22 +6,22 @@ import xIcon from "@images/x.svg";
 import teleIcon from "@images/tele.svg";
 import mediumIcon from "@images/medium.svg";
 import arrowIcon from "@images/arrow.svg";
-import icGithub from '@images/github.svg'
+import icGithub from "@images/github.svg";
 
 const FOOTER_LINKS = [
   {
     title: "Community",
     links: [
-      { title: "X", url: "#" },
-      { title: "Telegram", url: "#" },
-      { title: "Medium", url: "#" },
+      { title: "X", url: "https://x.com/CellProtocol_" },
+      { title: "Telegram", url: "https://t.me/cell_protocol" },
+      { title: "Medium", url: "https://medium.com/cell_protocol" },
     ],
   },
   {
     title: "Project",
     links: [
       { title: "Documentation", url: "#" },
-      { title: "Github", url: "#" },
+      { title: "Github", url: "https://github.com/cell-protocol-science" },
       { title: "Dapp", url: "#" },
     ],
   },
