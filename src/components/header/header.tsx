@@ -32,7 +32,7 @@ export default function Header() {
           <Link
             target="_blank"
             className="text-[#798675]"
-            href={"https://Pump.fun"}
+            href={"https://pump.fun/coin/EBSizwYBkVnZgViSraPFXqMtwAuioKmNnjZkcgy1pump"}
           >
             Pump.fun
           </Link>

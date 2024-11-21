@@ -29,9 +29,9 @@ const FOOTER_LINKS = [
     title: "Token",
     links: [
       { title: "Dexscreener", url: "#" },
-      { title: "Solscan", url: "#" },
+      { title: "Solscan", url: "https://solscan.io/token/EBSizwYBkVnZgViSraPFXqMtwAuioKmNnjZkcgy1pump" },
       { title: "Resource", url: "#" },
-      { title: "Pump.fun", url: "https://Pump.fun" },
+      { title: "Pump.fun", url: "https://pump.fun/coin/EBSizwYBkVnZgViSraPFXqMtwAuioKmNnjZkcgy1pump" },
     ],
   },
 ];
