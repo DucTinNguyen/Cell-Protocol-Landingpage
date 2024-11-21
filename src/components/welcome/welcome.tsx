@@ -1,6 +1,7 @@
 import Image from "next/image";
 import introImage from "@images/intro-image.png";
 import welcomeBG from "@images/welcome-bg.png";
+import Link from "next/link";
 export default function WelcomeSection() {
   return (
     <section
@@ -44,7 +45,9 @@ export default function WelcomeSection() {
         </p>
 
         {/* join link */}
-        <button
+        <Link
+          href={'https://t.me/cell_protocol'}
+          target="_blank"
           className="shadow-[0px_0px_40px_10px_rgba(140,227,57,0.50)] mt-8 h-12 p-[3px] flex items-center justify-center
       rounded-[999px] bg-[linear-gradient(90deg,#D3FF33_0%,#12873A_100%)]
       "
@@ -57,7 +60,7 @@ export default function WelcomeSection() {
           >
             Join our community
           </div>
-        </button>
+        </Link>
       </div>
 
       {/* intro image */}
