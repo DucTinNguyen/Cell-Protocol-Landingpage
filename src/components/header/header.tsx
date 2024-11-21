@@ -27,7 +27,7 @@ export default function Header() {
         font-semibold tracking-[-0.14px] mr-6"
         >
           <button className="text-primaryText">HOME</button>
-          <button className="text-[#798675] uppercase">Token</button>
+          <Link href={'https://dexscreener.com/solana/fhuyru3g7u2ipsma2xttzuf3xq1yfex1jkpuofcyhh47'} target="_blank" className="text-[#798675] uppercase">Token</Link>
           <button className="text-[#798675] uppercase">Documentation</button>
           <Link
             target="_blank"
